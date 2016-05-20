@@ -1,0 +1,109 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:p="http://primefaces.org/ui"> 
+    <h:head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta http-equiv="X-UA-Conpatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="description" content=""/>
+        <meta name="author" content=""/>
+        <link href="resourse/css/ajustePG.css" rel="stylesheet" type="text/css"/>
+        <link href="resourse/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <title>MD Web</title>
+    </h:head> 
+
+    <h:body> 
+
+        <!--Navegação -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <p:link class="navbar-brand" hreflang="index.xhtml" value="Home"/>         
+                </div>
+                <!-- Nav e links-->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav"> 
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+        </nav>
+
+        <!-- Page Content -->
+        <div class="container">
+
+            <!-- Page Header -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">CadMD
+                        <small>MD Diversões</small>
+                    </h1>
+                </div>
+            </div>
+            <!-- /.row -->
+
+            <!--CORPO -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">Cadastrar Cliente</div>
+                        <div class="panel-body">
+                            <h:form class="form-horizontal" role="form">
+                                <div class="form-group">
+                                    <h:outputLabel for="inputEmail3" class="col-sm-3 control-label">Email</h:outputLabel>
+                                    <div class="col-sm-9">
+                                        <h:inputText  class="form-control" id="inputEmail3" /> 
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <h:outputLabel for="inputPassword3" class="col-sm-3 control-label">Password</h:outputLabel>
+                                    <div class="col-sm-9">
+                                        <h:inputText class="form-control" />
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <h:outputLabel class="col-sm-3 control-label">Sex</h:outputLabel>
+                                    <div class="col-sm-9">
+                                        <h:selectOneMenu class="form-control form-control-sm">
+                                            <f:selectItem itemValue="feminino" itemLabel="Feminino"/>
+                                            <f:selectItem itemValue="masculino" itemLabel="Masculino"/>
+                                        </h:selectOneMenu>
+
+                                    </div>
+                                </div>
+                                <h:button class="btn btn-default" value="Cadastrar"/>
+                            </h:form>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Footer -->
+            <footer>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p>Alguma coisa deve ser posta aqui ! (ainda n sei)</p>
+                    </div>
+                </div>
+                <!-- /.row -->
+            </footer>
+        </div>
+        <!-- /.container -->
+
+    </h:body> 
+    <!-- jQuery -->
+    <script src="resourse/js/jquery.js" type="text/javascript"></script>
+    <script src="resourse/js/bootstrap.min.js" type="text/javascript"></script>
+
+
+</html>

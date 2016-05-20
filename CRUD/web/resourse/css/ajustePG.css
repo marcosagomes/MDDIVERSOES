@@ -1,0 +1,27 @@
+body {
+    padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+
+.portfolio-item {
+    margin-bottom: 25px;
+}
+
+footer {
+    margin: 50px 0;
+}
+.transp{
+    opacity:0.80;
+    -moz-opacity: 0.80;
+}
+.icone{
+    position:absolute; 
+    top:50%;
+    left:50%;
+    margin-top:-110px;
+    margin-left:-80px;
+}
+#fontes{
+    color:#ebebeb;
+    position:relative;
+    right: 15%
+}

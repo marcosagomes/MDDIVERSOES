@@ -1,66 +1,126 @@
-<?xml version='1.0' encoding='UTF-8' ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:p="http://primefaces.org/ui"> 
     <h:head>
-        <title>CRUD Básico Teste</title>
-        <link href="bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-    </h:head>
-    <h:body>
-            <form class="form-inline">
-                <div class="form-group">
-                    <label for="exampleInputName2">Name</label>
-                    <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe"/>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta http-equiv="X-UA-Conpatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="description" content=""/>
+        <meta name="author" content=""/>
+        <link href="resourse/css/ajustePG.css" rel="stylesheet" type="text/css"/>
+        <link href="resourse/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <title>MD Web</title>
+    </h:head> 
+
+    <h:body> 
+
+        <!--Navegação -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <h:outputLink styleClass="navbar-brand" value="index.xhtml">Home</h:outputLink>         
                 </div>
-                <div class="form-group">
-                    <label for="exampleInputEmail2">Email</label>
-                    <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com"/>
+                <!-- Nav e links-->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav"> 
+                    </ul>
                 </div>
-                <button type="submit" class="btn btn-primary">Send invitation</button>
-            </form>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+        </nav>
 
-            <h:dataTable value="#{pessoaBean.listaPessoas()}" var="dataPessoa" border="1">
-                <h:column>
-                    <f:facet name="header">
-                        ID
-                    </f:facet>
-                    <h:outputText value="#{dataPessoa.id}"/>
-                </h:column>
-                <h:column>
-                    <f:facet name="header">
-                        Nome
-                    </f:facet>
-                    <h:outputText value="#{dataPessoa.nome}"/>
-                </h:column>
-                <h:column>
-                    <f:facet name="header">
-                        Rua
-                    </f:facet>
-                    <h:outputText value="#{dataPessoa.rua}"/>
-                </h:column>
-                <h:column>
-                    <f:facet name="header">
-                        Email
-                    </f:facet>
-                    <h:outputText value="#{dataPessoa.email}"/>
-                </h:column><h:column>
-                    <f:facet name="header">
-                        Telefone
-                    </f:facet>
-                    <h:outputText value="#{dataPessoa.telefone}"/>
-                </h:column>
-                <h:column>
-                    <f:facet name="header">
-                        Ações
-                    </f:facet>
-                    <h:commandLink value="Remover" action="#{pessoaBean.removerPessoa(dataPessoa)}"/>                       
-                    |<h:commandLink value="Atualizar" action="#{pessoaBean.carregarPessoa(dataPessoa)}"/>
+        <!-- Page Content -->
+        <div class="container">
 
-                </h:column>
+            <!-- Page Header -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">CadMD
+                        <small>MD Diversões</small>
+                    </h1>
+                </div>
+            </div>
+            <!-- /.row -->
 
-            </h:dataTable>
-    </h:body>
-    <script src="bootstrap-3.3.6-dist/js/bootstrap.min.js" type="text/javascript"></script>
+            <!-- Projects Row -->
+            <div class="row">
+                <div class="col-md-6 portfolio-item">
+                    <h:outputLink value="cadsCliente.xhtml">
+                        <img src="resourse/img/azul.jpg" class="img-responsive " alt=""/>
+                        <div class="icone">
+                            <img src="resourse/img/addCliente.png" alt=""/> 
+                            <h3 id="fontes">Cadastrar Cliente</h3>
+                        </div>
+                    </h:outputLink>
+                </div>
+                <div class="col-md-6 portfolio-item">
+                    <h:outputLink value="#">
+                        <img src="resourse/img/vermelho.jpg" class="img-responsive" alt=""/>
+                        <div class="icone">
+                            <img src="resourse/img/addCliente.png" alt=""/> 
+                            <h3 id="fontes">Cadastrar Empresa</h3>
+                        </div>
+                    </h:outputLink>
+                </div>
+            </div>
+            <!-- /.row -->
+
+            <!-- Projects Row -->
+            <div class="row">
+                <div class="col-md-6 portfolio-item">
+                    <h:outputLink value="#">
+                        <img src="resourse/img/laranja.jpg" class="img-responsive" alt=""/>
+                        <div class="icone">
+                            <img src="resourse/img/calculadora.png" alt=""/> 
+                            <h3 id="fontes">Cadastrar Leitura</h3>
+                        </div>
+                    </h:outputLink>
+                </div>
+                <div class="col-md-6 portfolio-item">
+                    <h:outputLink value="#">
+                        <img src="resourse/img/verde.jpg" class="img-responsive" alt=""/>
+                        <div class="icone">
+                            <img src="resourse/img/detalhes.png" alt=""/> 
+                            <h3 id="fontes">Detalhes dos Clientes</h3>
+                        </div>
+                    </h:outputLink>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 portfolio-item">
+                    <h:outputLink value="#">
+                        <img src="resourse/img/roxo.jpg" class="img-responsive" alt=""/>
+                        <div class="icone">
+                            <img src="resourse/img/relatorio.png" alt=""/> 
+                            <h3 id="fontes">Relatórios Gerais</h3>
+                        </div>
+                    </h:outputLink>
+                </div>
+            </div>
+                <!-- /.row -->
+
+
+                <!-- Footer -->
+                <footer>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <p>Alguma coisa deve ser posta aqui ! (ainda n sei)</p>
+                        </div>
+                    </div>
+                    <!-- /.row -->
+                </footer>
+            </div>
+            <!-- /.container -->
+
+    </h:body> 
+    <!-- jQuery -->
+    <script src="resourse/js/jquery.js" type="text/javascript"></script>
+    <script src="resourse/js/bootstrap.min.js" type="text/javascript"></script>
+
+
 </html>
-
