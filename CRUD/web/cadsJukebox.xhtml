@@ -1,0 +1,155 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:p="http://primefaces.org/ui"> 
+    <h:head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta http-equiv="X-UA-Conpatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="description" content=""/>
+        <meta name="author" content=""/>
+        <link href="resourse/css/ajustePG.css" rel="stylesheet" type="text/css"/>
+        <link href="resourse/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <title>MD Web</title>
+    </h:head> 
+
+    <h:body> 
+
+        <!--Navegação -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <h:outputLink styleClass="navbar-brand" value="index.xhtml">Home</h:outputLink>      
+                </div>
+                <!-- Nav e links-->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav"> 
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+        </nav>
+
+        <!-- Page Content -->
+        <div class="container">
+
+            <!-- Page Header -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">CadMD
+                        <small> MD Diversões</small>
+                    </h1>
+                </div>
+            </div>
+            <!-- /.row -->
+
+            <!--CORPO -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">Cadastrar Jukebox</div>
+                        <div class="panel-body">
+                            <h:form class="form-horizontal" role="form">    
+                                <div class="form-group">
+                                    <h:outputLabel for="dd" class="col-sm-3 control-label">Cliente </h:outputLabel>
+                                    <div class="col-sm-9">
+                                        
+                                        <h:selectOneMenu class="form-control form-control-sm">
+                                            <f:selectItem itemValue="" itemLabel="" />
+                                        </h:selectOneMenu>
+                                    </div>
+                                </div><br/>
+
+                                <div class="form-group">
+                                    <h:outputLabel for="patrmonio" class="col-sm-3 control-label">Patrimônio</h:outputLabel>
+                                    <div class="col-sm-3">
+                                        <h:inputText class="form-control"/>
+                                    </div>
+                                    <h:outputLabel for="tipo" class="col-sm-3 control-label">Tipo de Máquina</h:outputLabel>
+                                    <div class="col-sm-3">
+                                        <h:selectOneMenu value="" class="form-control">
+                                            <f:selectItem itemValue="0" itemLabel="Escolha uma opção" />
+                                            <f:selectItem itemValue="Grande de Metal" itemLabel="Grande de Metal" />
+                                            <f:selectItem itemValue="Grande de Madeira" itemLabel="Grande de Madeira" />
+                                            <f:selectItem itemValue="Pequena de Metal" itemLabel="Pequena de Metal" />
+                                            <f:selectItem itemValue="Grande de Madeira" itemLabel="Grande de Madeira" />
+                                        </h:selectOneMenu>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <h:outputLabel for="seloAprova" class="col-sm-3 control-label">Nº APROVA</h:outputLabel>
+                                    <div class="col-sm-3">
+                                        <h:inputText class="form-control"/>
+                                    </div>
+                                    <h:outputLabel for="Selo ABLF" class="col-sm-3 control-label">Nº ABLF</h:outputLabel>
+                                    <div class="col-sm-3">
+                                        <h:inputText class="form-control"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <h:outputLabel for="setor" class="col-sm-3 control-label">Setor</h:outputLabel>
+                                    <div class="col-sm-3">
+                                        <h:inputText class="form-control" />
+                                    </div>
+                                    <h:outputLabel for="porcentagem" class="col-sm-3 control-label">Porcentagem</h:outputLabel>
+                                    <div class="col-sm-3">
+                                        <h:inputText class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <h:outputLabel for="tv" class="col-sm-3 control-label">TV</h:outputLabel>
+                                    <div class="col-sm-3">
+                                        <h:selectOneRadio value="" class="form-horizontal">
+                                            <f:selectItem itemValue="sim" itemLabel="Sim" />
+                                            <f:selectItem itemValue="nao" itemLabel="Não" />	   			
+                                        </h:selectOneRadio>
+                                    </div>
+                                    <h:outputLabel for="metroCabo" class="col-sm-3 control-label">Metro de Cabo</h:outputLabel>
+                                    <div class="col-sm-3">
+                                        <h:inputText class="form-control"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <h:outputLabel for="numero" class="col-sm-3 control-label">Data de Cadastro</h:outputLabel>
+                                    <div class="col-sm-3">
+                                        <h:inputText class="form-control">
+                                            <f:convertDateTime type="date" pattern="dd/MM/yyyy" />
+                                        </h:inputText>
+                                    </div>
+                                </div>
+                                <br/>  <div class="col-lg-offset-6">
+                                    <h:button class="btn btn-primary" value="Cadastrar"/>                                                                         
+                                </div>
+
+                            </h:form>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Footer -->
+            <footer>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p>Alguma coisa deve ser posta aqui ! (ainda n sei)</p>
+                    </div>
+                </div>
+                <!-- /.row -->
+            </footer>
+        </div>
+        <!-- /.container -->
+
+    </h:body> 
+    <!-- jQuery -->
+    <script src="resourse/js/jquery.js" type="text/javascript"></script>
+    <script src="resourse/js/bootstrap.min.js" type="text/javascript"></script>
+
+
+</html>

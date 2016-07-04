@@ -1,0 +1,121 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:p="http://primefaces.org/ui"> 
+    <h:head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta http-equiv="X-UA-Conpatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="description" content=""/>
+        <meta name="author" content=""/>
+        <link href="resourse/css/ajustePG.css" rel="stylesheet" type="text/css"/>
+        <link href="resourse/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <title>MD Web</title>
+    </h:head> 
+
+    <h:body> 
+
+        <!--Navegação -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <h:outputLink styleClass="navbar-brand" value="index.xhtml">Home</h:outputLink>
+                </div>
+                <!-- Nav e links-->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav"> 
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+        </nav>
+
+        <!-- Page Content -->
+        <div class="container">
+
+            <!-- Page Header -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">CadMD
+                        <small>MD Diversões</small>
+                    </h1>
+                </div>
+            </div>
+            <!-- /.row -->
+
+            <!--CORPO -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-default">
+                        <!-- Default panel contents -->
+                        <div class="panel-heading">Lista de Clientes</div>
+
+                        <!-- Table -->
+                        <h:dataTable id="clientes" 
+                                     value=""
+                                     var="clienteLista" class="table">
+                            <h:column >
+                                <f:facet name="header">
+                                    <h:outputText value="ID" />
+                                </f:facet>
+                                <h:outputText value="1"/>
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header" class="thead-inverse">
+                                    <h:outputText value="Nome"/>
+                                </f:facet>
+                                <h:outputText value="1"/>
+                            </h:column>
+                             <h:column>
+                                <f:facet name="header" class="thead-inverse">
+                                    <h:outputText value="Empresa"/>
+                                </f:facet>
+                                <h:outputText value="1"/>
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header" class="thead-inverse">
+                                    <h:outputText value="Telefone"/>
+                                </f:facet>
+                                <h:outputText value="1"/>
+                            </h:column>
+                             <h:column>
+                                <f:facet name="header" class="thead-inverse">
+                                    <h:outputText value="Status"/>
+                                </f:facet>
+                                <h:outputText value="1"/>
+                            </h:column>
+                             <h:column>
+                                <f:facet name="header" class="thead-inverse">
+                                    <h:outputText value="Ação"/>
+                                </f:facet>
+                                <h:outputText value="1"/>
+                            </h:column>
+                        </h:dataTable>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Footer -->
+            <footer>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p>Alguma coisa deve ser posta aqui ! (ainda n sei)</p>
+                    </div>
+                </div>
+                <!-- /.row -->
+            </footer>
+        </div>
+        <!-- /.container -->
+
+    </h:body> 
+    <!-- jQuery -->
+    <script src="resourse/js/jquery.js" type="text/javascript"></script>
+    <script src="resourse/js/bootstrap.min.js" type="text/javascript"></script>
+
+
+</html>

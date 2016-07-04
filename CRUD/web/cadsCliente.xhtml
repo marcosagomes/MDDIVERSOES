@@ -22,7 +22,7 @@
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <p:link class="navbar-brand" hreflang="index.xhtml" value="Home"/>         
+                    <h:outputLink styleClass="navbar-brand" value="index.xhtml">Home</h:outputLink>      
                 </div>
                 <!-- Nav e links-->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -41,7 +41,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1 class="page-header">CadMD
-                        <small>MD Diversões</small>
+                        <small> MD Diversões</small>
                     </h1>
                 </div>
             </div>
@@ -55,30 +55,99 @@
                         <div class="panel-body">
                             <h:form class="form-horizontal" role="form">
                                 <div class="form-group">
-                                    <h:outputLabel for="inputEmail3" class="col-sm-3 control-label">Email</h:outputLabel>
-                                    <div class="col-sm-9">
-                                        <h:inputText  class="form-control" id="inputEmail3" /> 
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <h:outputLabel for="inputPassword3" class="col-sm-3 control-label">Password</h:outputLabel>
+                                    <h:outputLabel for="nome" class="col-sm-3 control-label">Nome</h:outputLabel>
                                     <div class="col-sm-9">
                                         <h:inputText class="form-control" />
                                     </div>
                                 </div>
-
                                 <div class="form-group">
-                                    <h:outputLabel class="col-sm-3 control-label">Sex</h:outputLabel>
-                                    <div class="col-sm-9">
-                                        <h:selectOneMenu class="form-control form-control-sm">
-                                            <f:selectItem itemValue="feminino" itemLabel="Feminino"/>
-                                            <f:selectItem itemValue="masculino" itemLabel="Masculino"/>
+                                    <h:outputLabel for="nascimento" class="col-sm-3 control-label">Nascimento</h:outputLabel>
+                                    <div class="col-sm-3">
+                                        <h:inputText class="form-control" >
+                                            <f:convertDateTime type="date" pattern="dd/MM/yyyy" />
+                                        </h:inputText>
+                                    </div>
+                                     <h:outputLabel for="tv" class="col-sm-3 control-label">Sexo</h:outputLabel>
+                                    <div class="col-sm-3">
+                                        <h:selectOneMenu value="" class="form-control">
+                                            <f:selectItem itemValue="0" itemLabel="Escolha uma opção"/>
+                                            <f:selectItem itemValue="feminino" itemLabel="Feminino" />
+                                            <f:selectItem itemValue="masculino" itemLabel="Masculino"  />	   			
                                         </h:selectOneMenu>
-
+                                    </div> 
+                                </div>
+                                <div class="form-group">
+                                    <h:outputLabel for="cpf" class="col-sm-3 control-label">CPF</h:outputLabel>
+                                    <div class="col-sm-3">
+                                        <h:inputText class="form-control" />
+                                    </div>
+                                     <h:outputLabel for="rg" class="col-sm-3 control-label">RG</h:outputLabel>
+                                    <div class="col-sm-3">
+                                        <h:inputText class="form-control" />
                                     </div>
                                 </div>
-                                <h:button class="btn btn-default" value="Cadastrar"/>
+                                <div class="form-group">
+                                    <h:outputLabel for="cep" class="col-sm-3 control-label">CEP</h:outputLabel>
+                                    <div class="col-sm-3">
+                                        <h:inputText class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <h:outputLabel for="endereco" class="col-sm-3 control-label">Endereço</h:outputLabel>
+                                    <div class="col-sm-9">
+                                        <h:inputText class="form-control" /> 
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <h:outputLabel for="numero" class="col-sm-3 control-label">Número</h:outputLabel>
+                                    <div class="col-sm-3">
+                                        <h:inputText class="form-control"/>
+                                    </div>
+                                    <h:outputLabel for="bairoo" class="col-sm-3 control-label">Bairro</h:outputLabel>
+                                    <div class="col-sm-3">
+                                        <h:inputText class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <h:outputLabel for="cidade" class="col-sm-3 control-label">Cidade</h:outputLabel>
+                                    <div class="col-sm-3">
+                                        <h:inputText class="form-control"/>
+                                    </div>
+                                    <h:outputLabel for="estado" class="col-sm-3 control-label">Estado</h:outputLabel>
+                                    <div class="col-sm-3">
+                                        <h:inputText class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <h:outputLabel for="telefone" class="col-sm-3 control-label">Telefone</h:outputLabel>
+                                    <div class="col-sm-3">
+                                        <h:inputText class="form-control"/>
+                                    </div>
+                                    <h:outputLabel for="celular" class="col-sm-3 control-label">Celular</h:outputLabel>
+                                    <div class="col-sm-3">
+                                        <h:inputText class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <h:outputLabel for="email" class="col-sm-3 control-label">Email</h:outputLabel>
+                                    <div class="col-sm-3">
+                                        <h:inputText class="form-control"/>
+                                    </div>
+                                    <h:outputLabel for="tv" class="col-sm-3 control-label">Status</h:outputLabel>
+                                    <div class="col-sm-3">
+                                        <h:selectOneMenu value="" class="form-control">
+                                              <f:selectItem itemValue="0" itemLabel="Escolha uma opção válida" />
+                                            <f:selectItem itemValue="Ativo" itemLabel="Ativo" />
+                                            <f:selectItem itemValue="Desativado" itemLabel="Desativado" />	   			
+                                        </h:selectOneMenu>
+                                </div>
+                                </div>
+
+
+                                <br/>  <div class="col-lg-offset-6">
+                                    <h:button class="btn btn-primary" value="Cadastrar"/>                                                                         
+                                </div>
+
                             </h:form>
 
 
